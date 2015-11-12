@@ -4,6 +4,8 @@ buildscript {
         springRepo = 'http://repo.spring.io/libs-release-remote'
 
         vAssertJ = '3.1.0'
+        vDbsetup = '1.6.0'
+        vH2 = '1.3.170'
         vJava = '1.8'
         vJunit = '4.12'
         vMockito = '1.10.19'
@@ -36,10 +38,13 @@ task wrapper(type: Wrapper) {
 
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-web:${vSpringBoot}"
+    compile "org.springframework.boot:spring-boot-starter-data-jpa:${vSpringBoot}"
     compile "org.springframework:spring-context"
+    compile "com.h2database:h2:${vH2}"
 
     testCompile "junit:junit:${vJunit}"
     testCompile "org.assertj:assertj-core:${vAssertJ}"
     testCompile "org.mockito:mockito-core:${vMockito}"
     testCompile "org.springframework:spring-test"
+    testCompile "com.ninja-squad:DbSetup:${vDbsetup}"
 }
