@@ -1,0 +1,17 @@
+.gradle
+/local.properties
+**/.idea
+**/*.iml
+target
+build
+client/wrapper
+client/src/lib
+client/node_modules
+client/dist
+client/.tmp
+server/wrapper
+**/gradlew
+**/gradlew.bat
+manager/build
+gradle.properties
+out
